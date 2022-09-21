@@ -12,34 +12,165 @@
       href="./images/favicon-32x32.png"
     />
 
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Four card feature section</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <!-- tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom configuration of tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                red: "hsl(0, 78%, 62%)",
+                cyan: "hsl(180, 62%, 55%)",
+                orange: "hsl(34, 97%, 64%)",
+                blue: "hsl(212, 86%, 64%)",
+              },
+              neutral: {
+                "very-dark-blue": "hsl(234, 12%, 34%)",
+                "grayish-blue": "hsl(229, 6%, 66%)",
+                "very-light-gray": "hsl(0, 0%, 98%)",
+              },
+            },
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    Reliable, efficient delivery Powered by Technology Our Artificial
-    Intelligence powered tools use millions of project data points to ensure
-    that your project is successful Supervisor Monitors activity to identify
-    project roadblocks Team Builder Scans our talent network to create the
-    optimal team for your project Karma Regularly evaluates our talent to ensure
-    quality Calculator Uses data from past projects to provide better delivery
-    estimates
+  <body class="font-sans bg-neutral-very-light-gray">
+    <main>
+      <section class="mx-auto py-10 max-w-[85%] lg:max-w-[70%]">
+        <p
+          class="text-center font-extralight text-2xl text-neutral-grayish-blue mb-1"
+        >
+          Reliable, efficient delivery
+        </p>
+        <h2
+          class="text-center text-2xl font-semibold text-neutral-very-dark-blue mb-5"
+        >
+          Powered by Technology
+        </h2>
+        <p class="md:max-w-1/2 text-center text-neutral-grayish-blue">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+        <div class="mt-16 grid gap-5">
+          <article
+            class="overflow-hidden relative before:content-[''] before:inset-0 before:-translate-y-[98%] before:absolute before:height-3 before:bg-primary-cyan p-7 flex flex-col gap-8 rounded-md shadow-xl"
+          >
+            <div>
+              <h3
+                class="mb-1 text-xl text-neutral-very-dark-blue font-semibold"
+              >
+                Supervisor
+              </h3>
+              <p class="text-sm text-neutral-grayish-blue">
+                Monitors activity to identify project roadblocks
+              </p>
+            </div>
+            <div class="self-end">
+              <img
+                src="./images/icon-supervisor.svg"
+                alt=""
+                area-hidden="true"
+              />
+            </div>
+          </article>
+          <article
+            class="overflow-hidden relative before:content-[''] before:inset-0 before:-translate-y-[98%] before:absolute before:height-3 before:bg-primary-red p-7 flex flex-col gap-8 rounded-md shadow-xl"
+          >
+            <div>
+              <h3
+                class="mb-1 text-xl text-neutral-very-dark-blue font-semibold"
+              >
+                Team Builder
+              </h3>
+              <p class="text-sm text-neutral-grayish-blue">
+                Scans our talent network to create the optimal team for your
+                project
+              </p>
+            </div>
+            <div class="self-end">
+              <img
+                src="./images/icon-team-builder.svg"
+                alt=""
+                area-hidden="true"
+              />
+            </div>
+          </article>
+          <article
+            class="overflow-hidden relative before:content-[''] before:inset-0 before:-translate-y-[98%] before:absolute before:height-3 before:bg-primary-orange p-7 flex flex-col gap-8 rounded-md shadow-xl"
+          >
+            <div>
+              <h3
+                class="mb-1 text-xl text-neutral-very-dark-blue font-semibold"
+              >
+                Karma
+              </h3>
+              <p class="text-sm text-neutral-grayish-blue">
+                Regularly evaluates our talent to ensure quality
+              </p>
+            </div>
+            <div class="self-end">
+              <img src="./images/icon-karma.svg" alt="" area-hidden="true" />
+            </div>
+          </article>
+          <article
+            class="overflow-hidden relative before:content-[''] before:inset-0 before:-translate-y-[98%] before:absolute before:height-3 before:bg-primary-blue p-7 flex flex-col gap-8 rounded-md shadow-xl"
+          >
+            <div>
+              <h3
+                class="mb-1 text-xl text-neutral-very-dark-blue font-semibold"
+              >
+                Calculator
+              </h3>
+              <p class="text-sm text-neutral-grayish-blue">
+                Uses data from past projects to provide better delivery
+                estimates
+              </p>
+            </div>
+            <div class="self-end">
+              <img
+                src="./images/icon-calculator.svg"
+                alt=""
+                area-hidden="true"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-    <footer>
+    <footer class="text-[0.65rem] text-center mx-auto mb-3">
       <p class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          class="text-primary-cyan hover:underline"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by
+        <a
+          class="text-primary-cyan hover:underline"
+          href="https://www.frontendmentor.io/profile/shivaprakash-sudo"
+          target="_blank"
+          rel="noopener"
+          >Shiva Prakash Pendem</a
+        >.
       </p>
     </footer>
   </body>
